@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Varela+Round&display=swap');
+
+:root {
+  --title-font: 'Varela Round', sans-serif;
+  --text-font: 'Open Sans', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--title-font);
+}
+
+/* about section image css */
+.imageAboutPage {
+    width: 70%;
+    height: 60%;
+}
+
+body {
+  background-color: lightcyan;
+}
+
+button {
+  background-color: inherit;
+  border: 0.1em solid rebeccapurple;
+  border-radius: 0.4em;
+  width: 4em;
+  cursor: pointer;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 60em;
+  box-shadow: 0em 0em 1em brown;
+  box-sizing: border-box;
+  padding: 1em;
+  background-color: whitesmoke;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  
+  .menu li:hover .submenu {
+    display: block;
+  }
+
+#topbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+article {
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  border-bottom: 0.1em solid black;
+}
+
+#otherWorkExperience,
+#otherExperience,
+#skills,
+#experience {
+  page-break-inside: avoid;
+}
+
+article:last-of-type {
+  border-bottom: none;
+}
+
+.thumbnail {
+  height: 1.5em;
+  width: 1.5em;
+  padding-right: 0.5em;
+}
+
+button > .thumbnail {
+  padding: 0.5em;
+}
+
+#contactDetails {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.articleHeading {
+  padding-bottom: 0.3em;
+}
+
+.previousJob {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  row-gap: 0.3em;
+  margin-bottom: 2em;
+}
+
+.jobImage {
+  object-fit: contain;
+  max-height: 17rem;
+}
+
+#habitatImage {
+  border: 0.1rem solid black;
+  padding: 0.3rem;
+  background: white;
+}
+
+.jobTitle {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.jobDates {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: right;
+}
+
+.job {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+p {
+  margin-bottom: 0.5em;
+}
+
+iframe,
+.project > img {
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+.project,
+.job {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1em 0;
+  width: inherit;
+}
+
+.job > img {
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+#pontoonImage,
+#iArsenicImage {
+  height: 20em;
+}
+
+.projectTitle {
+  padding: 0.3em 0;
+}
+
+.projectDescription,
+.jobDescription {
+  width: 18em;
+  flex-grow: 2;
+}
+
+#raycasting {
+  height: 22em;
+  width: 20em;
+}
+#PortfolioApp {
+    height: 22em;
+    width: 20em;
+  }
+#sortingVisualizer {
+  height: 20em;
+  width: 20em;
+}
+
+#skillsTable {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#skillsTable > div {
+  border-bottom: 0.1em solid silver;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.print {
+  display: none;
+}
+
+.dontPrint {
+  display: block;
+}
+
+@media print {
+  @page {
+    size: auto;
+    margin: 0;
+  }
+
+  body {
+    margin: 1.6cm;
+  }
+
+  .pageArea * {
+    visibility: visible;
+  }
+
+  main {
+    box-shadow: none;
+  }
+
+  .print {
+    display: block;
+  }
+
+  .dontPrint {
+    display: none;
+  }
+}
